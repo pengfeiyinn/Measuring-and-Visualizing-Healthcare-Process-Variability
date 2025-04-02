@@ -16,7 +16,7 @@ SELECT DISTINCT
         AND pr.icd_code IN ('3610','3611','3612','3613','3614','3615','3616','3617','3618','3619','3620')
         AND pr.seq_num = 1
         AND a.admission_type NOT LIKE '%URGENT%' AND a.admission_type NOT LIKE '%EMER%';
--- Query from the temporary table
+
 CREATE TEMP TABLE selected_serviceevents AS 
 SELECT 
 	sp.subject_id,
@@ -37,7 +37,7 @@ FROM
 GROUP BY 
     curr_service;
 
--- Determine the frequency threshold for the top 10% most frequent events
+
 CREATE TEMP TABLE Top10PercentCutoff AS
 SELECT 
     MIN(frequency) AS cutoff
@@ -50,7 +50,7 @@ FROM
         frequency DESC
      LIMIT (SELECT CEIL(COUNT(*) * 0.10) FROM FrequencyCounts)) as top10;
 
--- Select the actual lab event records for those labels in the top 10%
+
 SELECT 
     sse.subject_id AS PatientID,
     sse.curr_service AS Events,
