@@ -39,7 +39,7 @@ FROM
 GROUP BY 
     label;
 
--- Determine the frequency threshold for the top 10% most frequent events
+-- Determine the frequency threshold
 CREATE TEMP TABLE Top10PercentCutoff AS
 SELECT 
     MIN(frequency) AS cutoff
@@ -52,7 +52,7 @@ FROM
         frequency DESC
      LIMIT (SELECT CEIL(COUNT(*) * 0.10) FROM FrequencyCounts)) as top10;
 
--- Select top 10% lab event records 
+-- Select top 10% lab events
 SELECT 
     sle.subject_id AS PatientID,
     sle.label AS Events,
