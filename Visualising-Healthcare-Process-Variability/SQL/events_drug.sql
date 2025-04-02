@@ -36,7 +36,7 @@ FROM
 GROUP BY 
     drug;
 
--- Determine the frequency threshold for the top 10% most frequent events
+-- Determine the frequency threshold 
 CREATE TEMP TABLE Top10PercentDrugCutoff AS
 SELECT 
     MIN(frequency) AS cutoff
@@ -49,7 +49,7 @@ FROM
         frequency DESC
      LIMIT (SELECT CEIL(COUNT(*) * 0.10) FROM DrugFrequencyCounts)) as top10;
 
--- Select top 10% lab event records 
+-- Select top 10% drug event records 
 SELECT 
     sde.subject_id AS PatientID,
     sde.drug AS Events,
