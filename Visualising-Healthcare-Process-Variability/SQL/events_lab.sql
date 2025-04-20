@@ -39,7 +39,7 @@ FROM
 GROUP BY 
     label;
 
--- Determine the frequency threshold
+
 CREATE TEMP TABLE Top10PercentCutoff AS
 SELECT 
     MIN(frequency) AS cutoff
