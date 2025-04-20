@@ -17,7 +17,7 @@ Before running the notebooks, you need to query data using SQL scripts in the `S
 - `events_drug.sql`: Extracts medication-related event data.
 - `events_service.sql`: Extracts procedure events data.
 - `charlson.sql`: Computes Charlson Comorbidity Index(CCI).
-- `age.sql`: Derives patient age from MIMIC-IV data.
+- `age.sql`: Extracts patient age from MIMIC-IV data.
 
 ## Project Structure
 
