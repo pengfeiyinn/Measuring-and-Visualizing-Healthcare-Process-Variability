@@ -1,4 +1,4 @@
-# Measuring and Visualizing Healthcare Proces Variability
+# Measuring and Visualizing Healthcare Process Variability
 
 ## Overview
 
