@@ -23,7 +23,7 @@ Before running the notebooks, you need to query data using SQL scripts in the `S
 
 This repository is organized as follows:
 
-- `Measuring-and-Visualizing-Healthcare-Process-Variability/`: Main folder:
+- `Visualizing-Healthcare-Process-Variability/`: Main folder:
   - `SQL/`: SQL scripts for data extraction from MIMIC-IV dataset.
   - `No_chopped/`: Code analysis using full patient traces.
   - `chopped_oneday/`: Code analysis using only the first 24 hours of each patient's traces.
