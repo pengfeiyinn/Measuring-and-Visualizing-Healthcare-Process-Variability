@@ -15,7 +15,7 @@ Before running the notebooks, you need to query data using SQL scripts in the `S
 - `patient.sql`: Extracts the patient cohort, including demographics.
 - `events_lab.sql`: Extracts laboratory event data for the cohort.
 - `events_drug.sql`: Extracts medication-related event data.
-- `events_service.sql`: Extracts procedure events data.
+- `events_service.sql`: Extracts hospital-related service events under which a patient is hospitalized.
 - `charlson.sql`: Computes Charlson Comorbidity Index(CCI).
 - `age.sql`: Extracts patient age from MIMIC-IV data.
 
