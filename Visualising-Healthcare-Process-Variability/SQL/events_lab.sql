@@ -13,7 +13,7 @@ SELECT
         mimiciv_hosp.procedures_icd pr ON a.hadm_id = pr.hadm_id
     WHERE
         EXTRACT(YEAR FROM a.admittime) - p.anchor_year + p.anchor_age  > 18
-        AND pr.icd_code IN ('3610','3611','3612','3613','3614','3615','3616','3617','3618','3619','3620')
+        AND pr.icd_code IN ('3610','3611','3612','3613','3614','3615','3616','3617','3619')
         AND pr.seq_num = 1
         AND a.admission_type NOT LIKE '%URGENT%' AND a.admission_type NOT LIKE '%EMER%';
 
